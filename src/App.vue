@@ -1,9 +1,20 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar-brand href="#">DP</b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item href="/">Home</b-nav-item>
+        <b-nav-item href="/pasteles">Pasteles</b-nav-item>
+        <b-nav-item href="#contacto">Contacto</b-nav-item>
+        <b-nav-item href="/admin">Admin</b-nav-item>
+
+      </b-navbar-nav>
+    </b-collapse>
+    </b-navbar>
     <router-view/>
   </div>
 </template>
