@@ -8,7 +8,7 @@
     <div class="container">
       
       <!--component that shows the available cakes-->
-      <types-cakes></types-cakes>
+      <types-cakes @sendOrder="sendPedido"></types-cakes>
       
       <!--component that shows the types of decorations that a cake can have-->
       <types-ornament></types-ornament>
@@ -40,7 +40,7 @@ export default {
     },
     methods:{
         sendPedido(id){
-            alert('realizarás pedido'+id);
+            this.$router.push({ name: 'order', params: { id: id } });
         }
     }
 };

@@ -101,6 +101,9 @@ export default {
 
     },
     methods:{
+        sendPedido(id){
+            this.$emit('sendOrder', id)
+        }
     }
 };
 </script>
